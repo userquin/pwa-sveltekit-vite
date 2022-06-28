@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	{#if enableManifest}
+	{#if !dev}
 		<link rel="manifest" href="/_app/immutable/manifest.webmanifest">
 	{/if}
 </svelte:head>

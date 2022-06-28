@@ -9,7 +9,7 @@ const config = {
       sveltekit(),
       VitePWA({
         srcDir: './build',
-        outDir: './.svelte-kit/output/client',
+        outDir: './build',
         mode: 'development',
         includeManifestIcons: false,
         scope: '/',
@@ -39,15 +39,31 @@ const config = {
               type: 'image/png',
               purpose: 'any maskable',
             },
-          ]
+          ],
         },
-        devOptions: {
-          enabled: true,
-          /* when using generateSW the PWA plugin will switch to classic */
-          type: 'module',
+        workbox: {
+          dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
+          globDirectory: './build/',
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
           navigateFallback: '/',
-          webManifestUrl: '/_app/manifest.webmanifest'
-        },
+          manifestTransforms: [async (entries) => {
+            const manifest = entries.filter(({ url }) =>
+              !url.endsWith('manifest.webmanifest') && !url.endsWith('sw.js') && !url.startsWith('workbox-')
+            ).map((e) => {
+              let url = e.url
+              if (url && url.endsWith('.html')) {
+                if (url.startsWith('/'))
+                  url = url.slice(1)
+
+                e.url = url === 'index.html' ? '/' : `/${url.substring(0, url.lastIndexOf('.'))}`
+                console.log(`${url} => ${e.url}`)
+              }
+
+              return e
+            })
+            return { manifest }
+          }]
+        }
       })
     ]
 };
