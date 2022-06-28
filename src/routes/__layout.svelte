@@ -1,7 +1,22 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	import { onMount } from 'svelte'
+	import { browser, dev } from '$app/env'
+
+	const enableManifest = !dev && browser
+
+	let ReloadPrompt
+	onMount(async () => {
+		enableManifest && (ReloadPrompt = (await import('$lib/ReloadPrompt.svelte')).default)
+	})
 </script>
+
+<svelte:head>
+	{#if enableManifest}
+		<link rel="manifest" href="/_app/immutable/manifest.webmanifest">
+	{/if}
+</svelte:head>
 
 <Header />
 
