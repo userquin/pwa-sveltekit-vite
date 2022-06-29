@@ -4,11 +4,11 @@
 	import { onMount } from 'svelte'
 	import { browser, dev } from '$app/env'
 
-	const enableManifest = !dev && browser
+	const loadRPC = !dev && browser
 
 	let ReloadPrompt
 	onMount(async () => {
-		enableManifest && (ReloadPrompt = (await import('$lib/ReloadPrompt.svelte')).default)
+		loadRPC && (ReloadPrompt = (await import('$lib/ReloadPrompt.svelte')).default)
 	})
 </script>
 
@@ -27,6 +27,10 @@
 <footer>
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
+
+{#if ReloadPrompt}
+	<svelte:component this={ReloadPrompt} />
+{/if}
 
 <style>
 	main {
