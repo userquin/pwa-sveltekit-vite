@@ -44,7 +44,7 @@ const config = {
         workbox: {
           dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
           globDirectory: './build/',
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
           navigateFallback: '/',
           manifestTransforms: [async (entries) => {
             console.log('upps', new Error('upps'));

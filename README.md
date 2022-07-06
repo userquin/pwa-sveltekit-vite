@@ -7,8 +7,10 @@ To make PWA Plugin run on build, find `node_modules/.pnpm/vite-plugin-pwa@0.12.2
 ```ts
 async writeBundle() {
     const sveltekitPresent = viteConfig.plugins.find(p => p.name === 'vite-plugin-svelte-kit')
-    if ((!viteConfig.build.ssr || sveltekitPresent) && !options2.disable)
-      await _generateSW();
+    if ((!viteConfig.build.ssr || sveltekitPresent) && !options2.disable) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await _generateSW();
+    }
 },
 ```
 
