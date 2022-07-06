@@ -1,5 +1,18 @@
 # create-svelte
 
+Awaiting https://github.com/antfu/vite-plugin-pwa/issues/324
+
+To make PWA Plugin run on build, find `node_modules/.pnpm/vite-plugin-pwa@0.12.2_vite@2.9.13/node_modules/vite-plugin-pwa/dist/index.js` and locate line 731, then paste the following code before the `closeBundle` method:
+
+```ts
+async writeBundle() {
+    const sveltekitPresent = viteConfig.plugins.find(p => p.name === 'vite-plugin-svelte-kit')
+    if ((!viteConfig.build.ssr || sveltekitPresent) && !options2.disable)
+      await _generateSW();
+},
+```
+
+
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
