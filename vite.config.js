@@ -1,4 +1,4 @@
-import { sveltekit } from '@sveltejs/kit/experimental/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
 
@@ -47,11 +47,15 @@ const config = {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
           navigateFallback: '/',
           manifestTransforms: [async (entries) => {
+            console.log('upps', new Error('upps'));
             const manifest = entries.filter(({ url }) =>
-              !url.endsWith('manifest.webmanifest') && !url.endsWith('sw.js') && !url.startsWith('workbox-')
+              !url.endsWith('sw.js') && !url.startsWith('workbox-')
             ).map((e) => {
               let url = e.url
-              if (url && url.endsWith('.html')) {
+              if (url === 'manifest.webmanifest') {
+                e.url = '/_app/immutable/manifest.webmanifest'
+              }
+              else if (url.endsWith('.html')) {
                 if (url.startsWith('/'))
                   url = url.slice(1)
 
