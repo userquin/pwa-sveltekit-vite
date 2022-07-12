@@ -4,12 +4,16 @@ import replace from '@rollup/plugin-replace'
 
 /** @type {import('vite').UserConfig} */
 const config = {
+    logLevel: 'info',
+    build: {
+      minify: false,
+    },
     plugins: [
       replace({ __DATE__: new Date().toISOString(), __RELOAD_SW__: 'false' }),
       sveltekit(),
       VitePWA({
-        srcDir: './build',
-        outDir: './build',
+        srcDir: './src',
+        outDir: './.svelte-kit/output/client',
         mode: 'development',
         includeManifestIcons: false,
         scope: '/',
@@ -43,23 +47,22 @@ const config = {
         },
         workbox: {
           dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
-          globDirectory: './build/',
+          globDirectory: './.svelte-kit/output',
           globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
           navigateFallback: '/',
           manifestTransforms: [async (entries) => {
-            console.log('upps', new Error('upps'));
             const manifest = entries.filter(({ url }) =>
               !url.endsWith('sw.js') && !url.startsWith('workbox-')
             ).map((e) => {
               let url = e.url
-              if (url === 'manifest.webmanifest') {
-                e.url = '/_app/immutable/manifest.webmanifest'
-              }
-              else if (url.endsWith('.html')) {
+              const index = url.indexOf('prerendered/pages/')
+              if (index > -1)
+                url = url.slice(index, index + 'prerendered/pages/'.length)
+              if (url.endsWith('.html')) {
                 if (url.startsWith('/'))
                   url = url.slice(1)
 
-                e.url = url === 'index.html' ? '/' : `/${url.substring(0, url.lastIndexOf('.'))}`
+                e.url = url === 'index.html' ? '/' : `/${url.slice(0, url.lastIndexOf('.'))}`
                 console.log(`${url} => ${e.url}`)
               }
 

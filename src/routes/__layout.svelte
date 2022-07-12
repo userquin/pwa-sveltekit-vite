@@ -14,7 +14,7 @@
 
 <svelte:head>
 	{#if !dev}
-		<link rel="manifest" href="/_app/immutable/manifest.webmanifest">
+		<link rel="manifest" href="/_app/manifest.webmanifest">
 	{/if}
 </svelte:head>
 

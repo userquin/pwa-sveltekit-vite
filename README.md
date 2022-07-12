@@ -2,16 +2,27 @@
 
 Awaiting https://github.com/antfu/vite-plugin-pwa/issues/324
 
-To make PWA Plugin run on build, find `node_modules/.pnpm/vite-plugin-pwa@0.12.2_vite@2.9.13/node_modules/vite-plugin-pwa/dist/index.js` and locate line 731, then paste the following code before the `closeBundle` method:
+To make PWA Plugin run on build, find `node_modules/.pnpm/vite-plugin-pwa@0.12.3_vite@2.9.14/node_modules/vite-plugin-pwa/dist/index.js` and locate line 507, then paste the following code before the `closeBundle` method:
 
 ```ts
 async writeBundle() {
-    const sveltekitPresent = viteConfig.plugins.find(p => p.name === 'vite-plugin-svelte-kit')
-    if ((!viteConfig.build.ssr || sveltekitPresent) && !options2.disable) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        await _generateSW();
+    // add support for new SvelteKit Vite Plugin
+    if (!ctx.options.disable && !ctx.viteConfig.build.ssr) {
+        isSvelteKitPresent = !!ctx.viteConfig.plugins.find(p => p.name === 'vite-plugin-svelte-kit');
+    }
+
+    if (ctx.viteConfig.build.ssr && isSvelteKitPresent) {
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        await _generateSW(ctx);
     }
 },
+```
+
+You must also add this in line 486 before the comment:
+```ts
+let isSvelteKitPresent = false;
+// src/plugins/build.ts
+function BuildPlugin(ctx) {
 ```
 
 
