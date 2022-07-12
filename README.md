@@ -18,6 +18,14 @@ async writeBundle() {
 },
 ```
 
+Then patch also the `closeBundle` with (just add `!isSvelteKitPresent && ` to the if statement):
+```ts
+async closeBundle() {
+  if (!isSvelteKitPresent && !ctx.viteConfig.build.ssr && !ctx.options.disable)
+    await _generateSW(ctx);
+},
+```
+
 You must also add this in line 486 before the comment:
 ```ts
 let isSvelteKitPresent = false;

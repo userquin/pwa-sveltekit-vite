@@ -51,14 +51,16 @@ const config = {
             'client/': '/',
             'prerendered/pages/': '/'
           },
-          globDirectory: './.svelte-kit/output',
+          globDirectory: '.svelte-kit/output',
           globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
           navigateFallback: '/',
           manifestTransforms: [async (entries) => {
+            console.log(entries)
             const manifest = entries.filter(({ url }) =>
-              !url.endsWith('sw.js') && !url.startsWith('workbox-') && !url.startsWith('server/')
+              !url.endsWith('sw.js') && !url.startsWith('workbox-') && !url.startsWith('server/') && url !== 'manifest.webmanifest'
             ).map((e) => {
               let url = e.url
+              console.log(url)
               if (url.endsWith('.html')) {
                 if (url.startsWith('/'))
                   url = url.slice(1)
@@ -69,6 +71,7 @@ const config = {
 
               return e
             })
+            console.log(manifest)
             return { manifest }
           }]
         }
