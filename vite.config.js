@@ -52,7 +52,7 @@ const config = {
           navigateFallback: '/',
           manifestTransforms: [async (entries) => {
             const manifest = entries.filter(({ url }) =>
-              !url.endsWith('sw.js') && !url.startsWith('workbox-')
+              !url.endsWith('sw.js') && !url.startsWith('workbox-') && !url.startsWith('server/')
             ).map((e) => {
               let url = e.url
               const index = url.indexOf('prerendered/pages/')
