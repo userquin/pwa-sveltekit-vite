@@ -47,6 +47,10 @@ const config = {
         },
         workbox: {
           dontCacheBustURLsMatching: /-[a-f0-9]{8}\./,
+          modifyURLPrefix: {
+            'client/': '/',
+            'prerendered/pages/': '/'
+          },
           globDirectory: './.svelte-kit/output',
           globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,webmanifest}'],
           navigateFallback: '/',
@@ -55,9 +59,6 @@ const config = {
               !url.endsWith('sw.js') && !url.startsWith('workbox-') && !url.startsWith('server/')
             ).map((e) => {
               let url = e.url
-              const index = url.indexOf('prerendered/pages/')
-              if (index > -1)
-                url = url.slice(index, index + 'prerendered/pages/'.length)
               if (url.endsWith('.html')) {
                 if (url.startsWith('/'))
                   url = url.slice(1)
