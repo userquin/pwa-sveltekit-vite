@@ -1,6 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
+import SequentialPlugin from "./plugins/sequential.js";
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -75,7 +76,8 @@ const config = {
             return { manifest }
           }]
         }
-      })
+      }),
+      SequentialPlugin(),
     ]
 };
 
