@@ -7,7 +7,7 @@ export default function SequentialPlugin(): Plugin {
 
     const plugins: Plugin[] = []
 
-    function changeToPlugin(plugin: Plugin) {
+    function changeToSequentialPlugin(plugin: Plugin) {
         if (plugin.name !== 'vite-sequential-plugin') {
             const { writeBundle: _writeBundle, closeBundle: _closeBundle } = plugin
             if (_writeBundle || _closeBundle) {
@@ -41,7 +41,7 @@ export default function SequentialPlugin(): Plugin {
         config(config) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            config.plugins?.flat(Infinity).forEach(changeToPlugin)
+            config.plugins?.flat(Infinity).forEach(changeToSequentialPlugin)
         },
         configResolved(_config) {
           config = _config
