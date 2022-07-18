@@ -11,26 +11,30 @@ export default function SequentialPlugin() {
 
     function changeToSequentialPlugin(plugin) {
         if (plugin.name !== 'vite-sequential-plugin') {
-            const { writeBundle: _writeBundle, closeBundle: _closeBundle } = plugin
-            if (_writeBundle || _closeBundle) {
-                if (_writeBundle) {
-                    plugin.writeBundle = async (...args) => {
+            const { writeBundle, closeBundle } = plugin
+            if (writeBundle || closeBundle) {
+                if (writeBundle) {
+                    plugin._writeBundle = async (...args) => {
                         if (active || !config.build.ssr) {
+                            config.build.ssr && console.log(`CALLING: ${plugin.name}`)
                             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
-                            await _writeBundle.apply(this, args)
+                            await writeBundle.apply(this, args)
                         }
                     }
+                    delete plugin.writeBundle
                 }
 
-                if (_closeBundle) {
-                    plugin.closeBundle = async (...args) => {
+                if (closeBundle) {
+                    plugin._closeBundle = async (...args) => {
                         if (activeClose || !config.build.ssr) {
+                            config.build.ssr && console.log(`CALLING: ${plugin.name}`)
                             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-ignore
-                            await _closeBundle.apply(this, args)
+                            await closeBundle.apply(this, args)
                         }
                     }
+                    delete plugin.closeBundle
                 }
                 plugins.push(plugin)
             }
@@ -51,14 +55,14 @@ export default function SequentialPlugin() {
         async writeBundle(options, bundle) {
             active = config.build.ssr
             for (const plugin of plugins) {
-                await plugin.writeBundle?.apply(this, [options, bundle])
+                await plugin._writeBundle?.apply(this, [options, bundle])
             }
             if (active) {
                 await new Promise(resolve => setTimeout(resolve, 1000))
                 activeClose = true
             }
             for (const plugin of plugins) {
-                await plugin.closeBundle?.apply(this)
+                await plugin._closeBundle?.apply(this)
             }
             console.log(`is active: ${active}`)
         }
