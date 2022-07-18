@@ -4400,7 +4400,7 @@ packages:
     dev: true
 
   file:vite-plugin-pwa-0.12.3.tgz_vite@3.0.2:
-    resolution: {integrity: sha512-s5KA6x38qQW+dAO8dwMVWb7+jkwdZF80CEUBWG76c94QYMOpOfr8z91D4vA4xwAd3qrTsquy0jKjB8OA2LxAAA==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
+    resolution: {integrity: sha512-DlIckzKlu4rMO+TsOx0PLq6oZfXU/i0p1bXMaDzasNSPqz+92vpraaLxllIp3f+yedzH+pVnlaIn3pOQW0S3nA==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
     id: file:vite-plugin-pwa-0.12.3.tgz
     name: vite-plugin-pwa
     version: 0.12.3
