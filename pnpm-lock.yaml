@@ -4,7 +4,7 @@ specifiers:
   '@fontsource/fira-mono': ^4.5.8
   '@rollup/plugin-replace': ^4.0.0
   '@sveltejs/adapter-static': next
-  '@sveltejs/kit': ^1.0.0-next.378
+  '@sveltejs/kit': ^1.0.0-next.386
   '@types/cookie': ^0.5.1
   '@types/node': ^18.0.6
   '@typescript-eslint/eslint-plugin': ^5.30.7
@@ -30,8 +30,8 @@ dependencies:
 
 devDependencies:
   '@rollup/plugin-replace': 4.0.0
-  '@sveltejs/adapter-static': 1.0.0-next.37
-  '@sveltejs/kit': 1.0.0-next.378_svelte@3.49.0+vite@3.0.2
+  '@sveltejs/adapter-static': 1.0.0-next.38
+  '@sveltejs/kit': 1.0.0-next.386_svelte@3.49.0+vite@3.0.2
   '@types/cookie': 0.5.1
   '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.30.7_6wltbjakwuqm7awqswigmiuhd4
@@ -1400,14 +1400,14 @@ packages:
       string.prototype.matchall: 4.0.7
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.37:
-    resolution: {integrity: sha512-BDFkx4CGAd6pG4e3+zYjy/eM9UDbhkRgXqavUzCO5oT8xXao5TeprY1AIbdzjMTmFjsWdeSXE9TbIsT0iikpyQ==}
+  /@sveltejs/adapter-static/1.0.0-next.38:
+    resolution: {integrity: sha512-O1b264K62E3OrUnsFxMjKn3CUJF50fxGcW0rWk8fa5kjzskPsSyTxS3jnWNryFaVJ3oSUtx57m4qFW43S1910Q==}
     dependencies:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.378_svelte@3.49.0+vite@3.0.2:
-    resolution: {integrity: sha512-Os8URaMJt5f29IR1mlZLE1lpwffzxc02ws/hJKNjMrOb/tgJjaIyLpGHi24uhQ/VXPv6fD2N6cQtEn+/X7nHGg==}
+  /@sveltejs/kit/1.0.0-next.386_svelte@3.49.0+vite@3.0.2:
+    resolution: {integrity: sha512-7Olw/QoZ0lvcjRqMNnR8vM7FCy8NN6NwNEhWTO8/J39yR6li1Q0aV0vW4Fh/7LetoVtyZqEyrqaUypgmbeH9rQ==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
@@ -1799,7 +1799,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001367
-      electron-to-chromium: 1.4.192
+      electron-to-chromium: 1.4.195
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.2
     dev: true
@@ -2083,8 +2083,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.192:
-    resolution: {integrity: sha512-8nCXyIQY9An88NXAp+PuPy5h3/w5ZY7Iu2lag65Q0XREprcat5F8gKhoHsBUnQcFuCRnmevpR8yEBYRU3d2HDw==}
+  /electron-to-chromium/1.4.195:
+    resolution: {integrity: sha512-vefjEh0sk871xNmR5whJf9TEngX+KTKS3hOHpjoMpauKkwlGwtMz1H8IaIjAT/GNnX0TbGwAdmVoXCAzXf+PPg==}
     dev: true
 
   /encodeurl/1.0.2:
@@ -4400,7 +4400,7 @@ packages:
     dev: true
 
   file:vite-plugin-pwa-0.12.3.tgz_vite@3.0.2:
-    resolution: {integrity: sha512-DlIckzKlu4rMO+TsOx0PLq6oZfXU/i0p1bXMaDzasNSPqz+92vpraaLxllIp3f+yedzH+pVnlaIn3pOQW0S3nA==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
+    resolution: {integrity: sha512-cF7onb/t6Z/7eJEJ5+92pNfaT61O1D5CDU0S/uV+DbcKBOlaDPthqndAnvaAL0uTQJUTxgPI3hOGtbT0/Fh7UQ==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
     id: file:vite-plugin-pwa-0.12.3.tgz
     name: vite-plugin-pwa
     version: 0.12.3
