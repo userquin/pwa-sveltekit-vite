@@ -1,12 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { ViteSvelteKitPWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
-import { resolve } from "path";
-// import SequentialPlugin from "./plugins/sequential.js";
-import fg from 'fast-glob'
-import { fileURLToPath } from 'url'
-
-const dirname = fileURLToPath(new URL('.', import.meta.url))
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -22,7 +16,6 @@ const config = {
         mode: 'development',
         scope: '/',
         base: '/',
-        includeAssets: fg.sync('**/*.{png,svg,txt,webp}', { cwd: resolve(dirname, 'static') }),
         manifest: {
           short_name: 'PWA Router',
           name: 'PWA Router',

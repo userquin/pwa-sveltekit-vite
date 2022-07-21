@@ -4,16 +4,14 @@ specifiers:
   '@fontsource/fira-mono': ^4.5.8
   '@rollup/plugin-replace': ^4.0.0
   '@sveltejs/adapter-static': next
-  '@sveltejs/kit': ^1.0.0-next.386
+  '@sveltejs/kit': ^1.0.0-next.388
   '@types/cookie': ^0.5.1
-  '@types/node': ^18.0.6
   '@typescript-eslint/eslint-plugin': ^5.30.7
   '@typescript-eslint/parser': ^5.30.7
   cookie: ^0.5.0
   cross-env: ^7.0.3
   eslint: ^8.20.0
   eslint-plugin-svelte3: ^4.0.0
-  fast-glob: ^3.2.11
   https-localhost: ^4.7.1
   svelte: ^3.49.0
   svelte-check: ^2.8.0
@@ -31,15 +29,13 @@ dependencies:
 devDependencies:
   '@rollup/plugin-replace': 4.0.0
   '@sveltejs/adapter-static': 1.0.0-next.38
-  '@sveltejs/kit': 1.0.0-next.386_svelte@3.49.0+vite@3.0.2
+  '@sveltejs/kit': 1.0.0-next.388_svelte@3.49.0+vite@3.0.2
   '@types/cookie': 0.5.1
-  '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.30.7_6wltbjakwuqm7awqswigmiuhd4
   '@typescript-eslint/parser': 5.30.7_he2ccbldppg44uulnyq4rwocfa
   cross-env: 7.0.3
   eslint: 8.20.0
   eslint-plugin-svelte3: 4.0.0_piwa6j2njmnknm35bh3wz5v52y
-  fast-glob: 3.2.11
   https-localhost: 4.7.1
   svelte: 3.49.0
   svelte-check: 2.8.0_svelte@3.49.0
@@ -1406,8 +1402,8 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.386_svelte@3.49.0+vite@3.0.2:
-    resolution: {integrity: sha512-7Olw/QoZ0lvcjRqMNnR8vM7FCy8NN6NwNEhWTO8/J39yR6li1Q0aV0vW4Fh/7LetoVtyZqEyrqaUypgmbeH9rQ==}
+  /@sveltejs/kit/1.0.0-next.388_svelte@3.49.0+vite@3.0.2:
+    resolution: {integrity: sha512-RSAVN3PykiCHcXOioO1JlTk9WSRIk9oHv4b4qzh8h4q5UoFrYVHcbVK7laxSrrIfl58nvfbZBBm5RGzqTjJuzg==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
@@ -1798,8 +1794,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001367
-      electron-to-chromium: 1.4.195
+      caniuse-lite: 1.0.30001368
+      electron-to-chromium: 1.4.196
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.2
     dev: true
@@ -1839,8 +1835,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite/1.0.30001367:
-    resolution: {integrity: sha512-XDgbeOHfifWV3GEES2B8rtsrADx4Jf+juKX2SICJcaUhjYBO3bR96kvEIHa15VU6ohtOhBZuPGGYGbXMRn0NCw==}
+  /caniuse-lite/1.0.30001368:
+    resolution: {integrity: sha512-wgfRYa9DenEomLG/SdWgQxpIyvdtH3NW8Vq+tB6AwR9e56iOIcu1im5F/wNdDf04XlKHXqIx4N8Jo0PemeBenQ==}
     dev: true
 
   /chalk/2.4.2:
@@ -2083,8 +2079,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.195:
-    resolution: {integrity: sha512-vefjEh0sk871xNmR5whJf9TEngX+KTKS3hOHpjoMpauKkwlGwtMz1H8IaIjAT/GNnX0TbGwAdmVoXCAzXf+PPg==}
+  /electron-to-chromium/1.4.196:
+    resolution: {integrity: sha512-uxMa/Dt7PQsLBVXwH+t6JvpHJnrsYBaxWKi/J6HE+/nBtoHENhwBoNkgkm226/Kfxeg0z1eMQLBRPPKcDH8xWA==}
     dev: true
 
   /encodeurl/1.0.2:
@@ -4400,7 +4396,7 @@ packages:
     dev: true
 
   file:vite-plugin-pwa-0.12.3.tgz_vite@3.0.2:
-    resolution: {integrity: sha512-cF7onb/t6Z/7eJEJ5+92pNfaT61O1D5CDU0S/uV+DbcKBOlaDPthqndAnvaAL0uTQJUTxgPI3hOGtbT0/Fh7UQ==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
+    resolution: {integrity: sha512-Yc+ww2svhz/cwOGtYPJDQ5OHItiXm/HF7bq+3kNHBEmxojx1lbhD590Mu4kQA2piIukFzC3XhZedsrjMNQ7Ouw==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
     id: file:vite-plugin-pwa-0.12.3.tgz
     name: vite-plugin-pwa
     version: 0.12.3
