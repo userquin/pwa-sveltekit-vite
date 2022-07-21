@@ -42,6 +42,9 @@ const config = {
               purpose: 'any maskable',
             },
           ],
+        },
+        workbox: {
+          globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
         }
       }),
       // SequentialPlugin(),
