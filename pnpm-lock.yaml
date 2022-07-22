@@ -1795,7 +1795,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001368
-      electron-to-chromium: 1.4.196
+      electron-to-chromium: 1.4.198
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.2
     dev: true
@@ -2079,8 +2079,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.196:
-    resolution: {integrity: sha512-uxMa/Dt7PQsLBVXwH+t6JvpHJnrsYBaxWKi/J6HE+/nBtoHENhwBoNkgkm226/Kfxeg0z1eMQLBRPPKcDH8xWA==}
+  /electron-to-chromium/1.4.198:
+    resolution: {integrity: sha512-jwqQPdKGeAslcq8L+1SZZgL6uDiIDmTe9Gq4brsdWAH27y7MJ2g9Ue6MyST3ogmSM49EAQP7bype1V5hsuNrmQ==}
     dev: true
 
   /encodeurl/1.0.2:
@@ -4396,7 +4396,7 @@ packages:
     dev: true
 
   file:vite-plugin-pwa-0.12.3.tgz_vite@3.0.2:
-    resolution: {integrity: sha512-Yc+ww2svhz/cwOGtYPJDQ5OHItiXm/HF7bq+3kNHBEmxojx1lbhD590Mu4kQA2piIukFzC3XhZedsrjMNQ7Ouw==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
+    resolution: {integrity: sha512-aFNa7s4qrxcbS3xDr2nINJneAer9KZMpWQYZX7jTUyD3B2QD3HsmmAbvKYQlnbR7bjL9L3pjSVqWPpacmxvA5g==, tarball: file:vite-plugin-pwa-0.12.3.tgz}
     id: file:vite-plugin-pwa-0.12.3.tgz
     name: vite-plugin-pwa
     version: 0.12.3

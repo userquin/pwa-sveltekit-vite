@@ -47,7 +47,6 @@ const config = {
           globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
         }
       }),
-      // SequentialPlugin(),
     ]
 };
 
