@@ -1,5 +1,10 @@
 # SvelteKit, Vite 3 and PWA Plugin
 
+**WARNING: DON'T USE THIS**: we're awating Rollup and Vite to add sequential parallel hooks support:
+- RFC: https://github.com/vitejs/vite/discussions/9442
+- Rollup PR (Lukas Taegert-Atkinson and Anthony Fu): https://github.com/rollup/rollup/pull/4600
+- Vite PR (Anthony Fu): https://github.com/vitejs/vite/pull/9634
+
 Finally!, it works.
 
 Using a local build of the PWA PR: https://github.com/antfu/vite-plugin-pwa/pull/327.
