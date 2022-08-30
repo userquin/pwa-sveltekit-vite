@@ -43,8 +43,6 @@ const { closeBundle, ...rest } = build
 
 delete build.closeBundle
 
-console.log(build)
-
 /** @type {import('vite').UserConfig} */
 const config = {
     logLevel: 'info',
