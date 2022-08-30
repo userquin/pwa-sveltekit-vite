@@ -1,7 +1,7 @@
 # SvelteKit, Vite 3 and PWA Plugin
 
 **UPDATED to Vite 3.1-beta1 and latest SvelteKit 1.0.0-next.454**:
-- patching manually `VitePluginPWA` to configure the new `Rollup` hook: check the `vite.config.js` module
+- patching manually `VitePluginPWA` to configure the new `Rollup` sequential hook in `closeBundle`: check the `vite.config.js` module
 - migrated project with `pnpm dlx svelte-migrate routes`
 
 **WARNING - DON'T USE THIS**: we're awating Rollup and Vite to add sequential parallel hooks support:
