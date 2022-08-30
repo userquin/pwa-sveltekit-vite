@@ -2,7 +2,7 @@
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 	import { onMount } from 'svelte'
-	import { browser, dev } from '$app/env'
+	import { browser, dev } from '$app/environment'
 
 	const loadRPC = !dev && browser
 
