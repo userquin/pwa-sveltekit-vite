@@ -6,7 +6,7 @@ Updated PWA Plugin with https://github.com/antfu/vite-plugin-pwa/pull/370 local 
 
 Added logic that will go to the SvelteKit integration: check Vite config file.
 
-**WARNING**: SvelteKit not update, failing post install script when installing latest version (474).
+**WARNING**: SvelteKit not updated, failing post install script when installing latest version (474).
 
 **WARNING**: current version failing on build running the adapter, I need to fix it.
 
