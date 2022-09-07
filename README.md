@@ -1,6 +1,16 @@
 # SvelteKit, Vite 3.1 and PWA Plugin
 
-## Latest Changes: 2022-08-31
+## Latest Changes: 2022-09-07
+
+Updated PWA Plugin with https://github.com/antfu/vite-plugin-pwa/pull/370 local copy (we need to fix types).
+
+Added logic that will go to the SvelteKit integration: check Vite config file.
+
+**WARNING**: SvelteKit not update, failing post install script when installing latest version (474).
+
+**WARNING**: current version failing on build running the adapter, I need to fix it.
+
+## 2022-08-31
 
 **UPDATED to Vite 3.1.0-beta1 and latest SvelteKit 1.0.0-next.454**:
 - hacking `VitePluginPWA` to configure the new `Rollup` sequential hook in `closeBundle`: check the `vite.config.js` module (**DON'T DO THIS**, we're preparing a new version to support Vite 3.1)
