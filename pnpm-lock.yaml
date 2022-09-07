@@ -1,23 +1,23 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/fira-mono': ^4.5.8
+  '@fontsource/fira-mono': ^4.5.9
   '@rollup/plugin-replace': ^4.0.0
   '@sveltejs/adapter-static': next
-  '@sveltejs/kit': ^1.0.0-next.454
+  '@sveltejs/kit': ^1.0.0-next.476
   '@types/cookie': ^0.5.1
-  '@typescript-eslint/eslint-plugin': ^5.30.7
-  '@typescript-eslint/parser': ^5.30.7
+  '@typescript-eslint/eslint-plugin': ^5.36.2
+  '@typescript-eslint/parser': ^5.36.2
   cookie: ^0.5.0
   cross-env: ^7.0.3
-  eslint: ^8.20.0
+  eslint: ^8.23.0
   eslint-plugin-svelte3: ^4.0.0
   https-localhost: ^4.7.1
-  svelte: ^3.49.0
+  svelte: ^3.50.0
   svelte-check: ^2.9.0
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.0
-  typescript: ^4.7.4
+  typescript: ^4.8.2
   vite: ^3.1.0
   vite-plugin-pwa: file:vite-plugin-pwa-0.12.7.tgz
   workbox-window: ^6.5.4
@@ -29,7 +29,7 @@ dependencies:
 devDependencies:
   '@rollup/plugin-replace': 4.0.0
   '@sveltejs/adapter-static': 1.0.0-next.42
-  '@sveltejs/kit': 1.0.0-next.474_svelte@3.50.0+vite@3.1.0
+  '@sveltejs/kit': 1.0.0-next.476_svelte@3.50.0+vite@3.1.0
   '@types/cookie': 0.5.1
   '@typescript-eslint/eslint-plugin': 5.36.2_iurrlxgqcgk5svigzxakafpeuu
   '@typescript-eslint/parser': 5.36.2_yqf6kl63nyoq5megxukfnom5rm
@@ -43,7 +43,7 @@ devDependencies:
   tslib: 2.4.0
   typescript: 4.8.2
   vite: 3.1.0
-  vite-plugin-pwa: file:vite-plugin-pwa-0.12.7.tgz_zp7t6aa2r77waajuyr5zt63phe
+  vite-plugin-pwa: file:vite-plugin-pwa-0.12.7.tgz_vite@3.1.0
   workbox-window: 6.5.4
 
 packages:
@@ -1427,8 +1427,8 @@ packages:
     resolution: {integrity: sha512-BLMQY8zfUibex5FE3zkMXdkW4l/n+1tecUrCxmmO5jc8vEuZc41VQdmQtDifX80Bf1pCG3RH7151tJ+jqte2lg==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.474_svelte@3.50.0+vite@3.1.0:
-    resolution: {integrity: sha512-RhyWczm95S4VIlnjCAc5TPRGl2OoVWZ4cQRBKmzdF7MUScTduNzo6WB2JWkImgwE3nqdvepgnem56GbEUj3e5Q==}
+  /@sveltejs/kit/1.0.0-next.476_svelte@3.50.0+vite@3.1.0:
+    resolution: {integrity: sha512-sCd51gwU5eva/bFEQCQDgRc2buNCHC3bk5tLz7uoF7PUkNFFuqJSfkLYd3hs1T3VQWrkH8oU9HK3mJsUKAWe1A==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1831,7 +1831,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001390
-      electron-to-chromium: 1.4.242
+      electron-to-chromium: 1.4.243
       node-releases: 2.0.6
       update-browserslist-db: 1.0.7_browserslist@4.21.3
     dev: true
@@ -2124,8 +2124,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.242:
-    resolution: {integrity: sha512-nPdgMWtjjWGCtreW/2adkrB2jyHjClo9PtVhR6rW+oxa4E4Wom642Tn+5LslHP3XPL5MCpkn5/UEY60EXylNeQ==}
+  /electron-to-chromium/1.4.243:
+    resolution: {integrity: sha512-BgLD2gBX43OSXwlT01oYRRD5NIB4n3okTRxkzEAC6G0SZG4TTlyrWMjbOo0fajCwqwpRtMHXQNMjtRN6qpNtfw==}
     dev: true
 
   /encodeurl/1.0.2:
@@ -4560,14 +4560,13 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  file:vite-plugin-pwa-0.12.7.tgz_zp7t6aa2r77waajuyr5zt63phe:
-    resolution: {integrity: sha512-mcKN36AIX+0/227c5fkDth6bwcRtOyleH1krPYclBz837BiFKmFLMIlSNTIPpFwy5caUlUKRZ+JKq1mxkrBfug==, tarball: file:vite-plugin-pwa-0.12.7.tgz}
+  file:vite-plugin-pwa-0.12.7.tgz_vite@3.1.0:
+    resolution: {integrity: sha512-8IPJFTv0VthKqAS/whD71eXLgunEp/jdsHWLjhtEySKcR+nABKEmP+ul9tZEdnmIFlwKTHJuNW8vJkT+X5gQYw==, tarball: file:vite-plugin-pwa-0.12.7.tgz}
     id: file:vite-plugin-pwa-0.12.7.tgz
     name: vite-plugin-pwa
     version: 0.12.7
     peerDependencies:
       vite: ^3.1.0
-      workbox-window: ^6.5.4
     dependencies:
       debug: 4.3.4
       fast-glob: 3.2.11

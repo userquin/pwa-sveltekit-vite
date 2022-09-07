@@ -3,6 +3,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 import replace from '@rollup/plugin-replace'
 
 function configureOptions(viteOptions, options) {
+  if (!options.integration)
+    options.integration = {}
+
+  // will run closeBundle sequential hook before kit adapter
+  options.integration.closeBundleOrder = 'pre'
+
   const {
     base = viteOptions.build.base ?? '/',
     adapterFallback,

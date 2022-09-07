@@ -2,6 +2,14 @@
 
 ## Latest Changes: 2022-09-07
 
+Updated PWA Plugin with https://github.com/antfu/vite-plugin-pwa/pull/371 local copy.
+
+Added logic that will go to the SvelteKit integration: check Vite config file.
+
+The logic in `configureOptions` function will be provided by the new SvelteKit integration in Vite Plugin PWA.
+
+## 2022-09-07
+
 Updated PWA Plugin with https://github.com/antfu/vite-plugin-pwa/pull/370 local copy (we need to fix types).
 
 Added logic that will go to the SvelteKit integration: check Vite config file.
