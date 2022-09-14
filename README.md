@@ -1,6 +1,10 @@
 # SvelteKit, Vite 3.1 and PWA Plugin
 
-## Latest Changes: 2022-09-07
+## Latest changes: 2022-09-14
+
+This repo is now deprecated, check [@vite-pwa/sveltekit (wip)](https://github.com/userquin/vite-pwa-sveltekit-integration).
+
+## 2022-09-07 (2)
 
 Updated PWA Plugin with https://github.com/antfu/vite-plugin-pwa/pull/371 local copy.
 
